@@ -1,0 +1,10 @@
+{
+	"MINTING": {
+		"PAYMENT": {
+			"TITLE": "Minting payment",
+			"SUBTITLE": "You need to pay some fees in order to mint your NFT",
+			"INSTRUCTION": "Send {{total}} ₳ to the following address",
+			"TRACKING": "Paid {{current}} of {{total}} ADA"
+		}
+	}
+}

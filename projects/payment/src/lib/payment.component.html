@@ -1,0 +1,31 @@
+<div class="payment-container">
+	<h1 class="title">{{ "MINTING.PAYMENT.TITLE" | translate }}</h1>
+	<div class="section">
+		<p>{{ "MINTING.PAYMENT.SUBTITLE" | translate }}</p>
+		<div class="row">
+			<div class="col-md-auto qr-code">
+				<qrcode [qrdata]="address" [width]="148" [allowEmptyString]="true"></qrcode>
+			</div>
+			<div class="col">
+				<div class="payment-status">
+					<p class="without-payment" *ngIf="currentPayments == 0; else paids"> {{total}} ADA</p>
+					<ng-template #paids>
+						<div class="with-payment">
+							<p>{{ "MINTING.PAYMENT.TRACKING" | translate :{total: total, current: currentPayments} }}</p>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" [style.width]="(currentPayments/total)*100 + '%'" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</ng-template>
+				</div>
+				<div class="payment-guide">
+					<p class="send">{{ "MINTING.PAYMENT.INSTRUCTION" | translate :{total: total} }}</p>
+					<p class="link"><span class="address">{{address}}</span> <a href=""> <fa-icon [icon]="['far', 'square']"></fa-icon></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<button type="button" class="btn btn-outline-dark">Cancel</button>
+	</div>
+</div>

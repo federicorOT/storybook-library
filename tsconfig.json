@@ -14,6 +14,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "payment": [
+        "dist/payment/payment",
+        "dist/payment"
+      ]
+    },
     "target": "es2015",
     "module": "es2020",
     "lib": [

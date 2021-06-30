@@ -1,0 +1,58 @@
+@import '../../../styles.scss';
+
+.payment-container {
+	// background-color: #FFFFFF;
+	border-radius: 5px;
+	padding: 54px 84px;
+	box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.51);
+	-webkit-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.51);
+	-moz-box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.51);
+
+	h1.title {
+		color: $color-blue-dark;
+		font-weight: 800;
+		font-size: 36px;
+    line-height: 50px;
+	}
+
+	.section {
+		border-top: 1px solid $color-gray-light;
+	}
+
+	.qr-code {
+		width: 148px;
+		height: 148px;
+	}
+
+	.payment-status {
+		color: $color-blue-dark;
+		.without-payment {
+			font-weight: 800;
+		}
+		.with-payment {
+			p {
+				color: $color-gray-normal;
+			}
+			.progress {
+				width: 298px;
+				height: 8px;
+			}
+		}
+	}
+
+	.payment-guide {
+		color: $color-blue-dark;
+		.send {
+			font-weight: 600;
+		}
+		.link {
+			i {
+				height: 36px;
+				width: 36px;
+			}
+		}
+		span.address {
+			color: $color-gray-normal;
+		}
+	}
+}
